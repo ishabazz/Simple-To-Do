@@ -24,7 +24,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="4LH-uf-TJk">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" id="4LH-uf-TJk" customClass="TaskCell" customModule="Simple_To_Do" customModuleProvider="target">
                                         <frame key="frameInset" minY="92" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4LH-uf-TJk" id="iFS-P7-BcR">
@@ -51,6 +51,10 @@
                                                 <constraint firstItem="M9D-Jy-kw1" firstAttribute="leading" secondItem="iFS-P7-BcR" secondAttribute="leadingMargin" id="vza-Mj-J2u"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="statusImageView" destination="M9D-Jy-kw1" id="oo8-i9-N09"/>
+                                            <outlet property="taskLabel" destination="Jmh-bv-aG7" id="1tg-SJ-oPH"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -58,8 +62,15 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Simple To Do" id="Hfg-Kh-ZiS">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qxF-1L-67A"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qxF-1L-67A">
+                            <connections>
+                                <action selector="addPressed:" destination="BYZ-38-t0r" id="XNH-Xv-5Wj"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="3OJ-uK-Gbb" id="KRw-FY-LcS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,6 +14,9 @@
 		B484DD531D3A9B5100FE1844 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B484DD511D3A9B5100FE1844 /* LaunchScreen.storyboard */; };
 		B484DD5E1D3A9B5100FE1844 /* Simple_To_DoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B484DD5D1D3A9B5100FE1844 /* Simple_To_DoTests.swift */; };
 		B484DD691D3A9B5100FE1844 /* Simple_To_DoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B484DD681D3A9B5100FE1844 /* Simple_To_DoUITests.swift */; };
+		B484DD771D3AA9FA00FE1844 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B484DD761D3AA9FA00FE1844 /* TaskCell.swift */; };
+		B484DD791D3AB40A00FE1844 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B484DD781D3AB40A00FE1844 /* Task.swift */; };
+		B484DD7B1D3AB4F000FE1844 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B484DD7A1D3AB4F000FE1844 /* DataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		B484DD641D3A9B5100FE1844 /* Simple To DoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple To DoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B484DD681D3A9B5100FE1844 /* Simple_To_DoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_To_DoUITests.swift; sourceTree = "<group>"; };
 		B484DD6A1D3A9B5100FE1844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B484DD761D3AA9FA00FE1844 /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		B484DD781D3AB40A00FE1844 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		B484DD7A1D3AB4F000FE1844 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,9 @@
 				B484DD481D3A9B5100FE1844 /* AppDelegate.swift */,
 				B484DD4A1D3A9B5100FE1844 /* ViewController.swift */,
 				B484DD4C1D3A9B5100FE1844 /* Main.storyboard */,
+				B484DD761D3AA9FA00FE1844 /* TaskCell.swift */,
+				B484DD781D3AB40A00FE1844 /* Task.swift */,
+				B484DD7A1D3AB4F000FE1844 /* DataSource.swift */,
 				B484DD4F1D3A9B5100FE1844 /* Assets.xcassets */,
 				B484DD511D3A9B5100FE1844 /* LaunchScreen.storyboard */,
 				B484DD541D3A9B5100FE1844 /* Info.plist */,
@@ -265,7 +274,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B484DD791D3AB40A00FE1844 /* Task.swift in Sources */,
 				B484DD4B1D3A9B5100FE1844 /* ViewController.swift in Sources */,
+				B484DD771D3AA9FA00FE1844 /* TaskCell.swift in Sources */,
+				B484DD7B1D3AB4F000FE1844 /* DataSource.swift in Sources */,
 				B484DD491D3A9B5100FE1844 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
