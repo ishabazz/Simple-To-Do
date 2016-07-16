@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,6 +23,36 @@
                                 <frame key="frameInset"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="4LH-uf-TJk">
+                                        <frame key="frameInset" minY="92" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4LH-uf-TJk" id="iFS-P7-BcR">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M9D-Jy-kw1">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="EQ3-qI-V6B"/>
+                                                        <constraint firstAttribute="width" constant="44" id="ggf-vN-kSy"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jmh-bv-aG7">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Jmh-bv-aG7" firstAttribute="leading" secondItem="M9D-Jy-kw1" secondAttribute="trailing" constant="16" id="6CN-jL-MXz"/>
+                                                <constraint firstItem="Jmh-bv-aG7" firstAttribute="top" secondItem="iFS-P7-BcR" secondAttribute="topMargin" constant="8" id="IgH-h7-pZv"/>
+                                                <constraint firstItem="M9D-Jy-kw1" firstAttribute="centerY" secondItem="iFS-P7-BcR" secondAttribute="centerY" id="OMk-F1-7jl"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Jmh-bv-aG7" secondAttribute="trailing" constant="16" id="h6f-lw-O6E"/>
+                                                <constraint firstItem="M9D-Jy-kw1" firstAttribute="leading" secondItem="iFS-P7-BcR" secondAttribute="leadingMargin" id="vza-Mj-J2u"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
