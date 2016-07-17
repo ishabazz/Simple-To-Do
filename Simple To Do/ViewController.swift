@@ -16,6 +16,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        tableView.dataSource = data
+        tableView.delegate = self
+        tableView.estimatedRowHeight = 50
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        if data.taskCount() == 0 {
+            data.setupDefaultData()
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,7 +59,24 @@ class ViewController: UIViewController {
         
         alert.addAction(cancelAction)
 
+        present(alert, animated: true, completion: nil)
+
     }
 
+}
+
+
+extension ViewController:UITableViewDelegate{
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        data.toggleCompletion(index: indexPath)
+        self.tableView.reloadData()
+        
+    }
+    
+
+ 
+    
+    
 }
 
