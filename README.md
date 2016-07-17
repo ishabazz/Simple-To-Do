@@ -2,6 +2,8 @@
 
 This is the first part of a series of demo apps mean to demonstrate using UITableViews with various data sources.
 
-##Reqirements
 
-This project was created using XCode 8 Beta 2 and is written in Swift 3
+##Support
+ - XCode 8.0 beta 2
+ - Swift 3.x
+ - iOS 10.0
