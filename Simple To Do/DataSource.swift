@@ -16,6 +16,10 @@ class DataSource:NSObject{
     ///   An array of tasks
     var tasks:[Task] = []
     
+    /// User defaults
+    let defaults = UserDefaults.standard
+
+    
     /// add: Adds a task to the list
     /// - Parameter task: The task that will be added
     /// - Returns: Void
@@ -79,6 +83,10 @@ class DataSource:NSObject{
         add(task:"Apples")
         add(task:"Salad")
         
+        defaults.set(true, forKey: Keys.initialized.rawValue) //Set the flag
+        defaults.synchronize() //Save the changes immediately
+
+        
     }
 }
 
@@ -113,13 +121,13 @@ extension DataSource:UITableViewDataSource{
         
     }
     
-    func format(text:String, strike:Bool) -> AttributedString{
+    func format(text:String, strike:Bool) -> NSAttributedString{
         
         
         if strike {
-            return AttributedString(string: text, attributes: [NSStrikethroughStyleAttributeName:NSNumber(value:NSUnderlineStyle.styleSingle.rawValue)])
+            return NSAttributedString(string: text, attributes: [NSStrikethroughStyleAttributeName:NSNumber(value:NSUnderlineStyle.styleSingle.rawValue)])
         }
-        return  AttributedString(string: text, attributes: [NSStrikethroughStyleAttributeName:NSNumber(value:NSUnderlineStyle.styleNone.rawValue)])
+        return  NSAttributedString(string: text, attributes: [NSStrikethroughStyleAttributeName:NSNumber(value:NSUnderlineStyle.styleNone.rawValue)])
     }
     
     

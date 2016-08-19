@@ -8,10 +8,16 @@
 
 import UIKit
 
+enum Keys:String{
+    case initialized
+}
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     let data = DataSource()
+    
+    let defaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +28,7 @@ class ViewController: UIViewController {
         tableView.estimatedRowHeight = 50
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        if data.taskCount() == 0 {
+        if !defaults.bool(forKey: Keys.initialized.rawValue){
             data.setupDefaultData()
         }
         
