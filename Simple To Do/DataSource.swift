@@ -28,6 +28,8 @@ class DataSource:NSObject{
         let aTask = Task(name: task, completed: false)
         tasks.append(aTask)
         
+        save()
+        
     }
     
     
@@ -47,10 +49,10 @@ class DataSource:NSObject{
     /// - Returns: Void
     func toggleCompletion(index:IndexPath){
         
-        var task = tasks[index.row]
+        let task = tasks[index.row]
         task.completed = !task.completed
         tasks[index.row] = task
-        
+        save()
     }
     
     
@@ -88,6 +90,35 @@ class DataSource:NSObject{
 
         
     }
+    
+    
+    func save(){
+       let data =  NSKeyedArchiver.archivedData(withRootObject: tasks)
+        guard  let filePath = FileController.filePath() else {
+            return
+        }
+        do{
+            try data.write(to: filePath)
+        }
+        catch let error as NSError{
+            print(error.localizedDescription)
+        }
+        
+    }
+    
+    func loadFromFile(){
+        guard  let filePath = FileController.filePath() else {return}
+        
+        guard let data =  NSData(contentsOf: filePath) else {return }
+
+        guard  let list = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as? [Task] else {
+            return
+        }
+        
+        self.tasks = list
+        
+        
+     }
 }
 
 

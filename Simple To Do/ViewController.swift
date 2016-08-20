@@ -10,6 +10,8 @@ import UIKit
 
 enum Keys:String{
     case initialized
+    case name
+    case completed
 }
 
 class ViewController: UIViewController {
@@ -22,15 +24,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        data.loadFromFile()
         tableView.dataSource = data
         tableView.delegate = self
         tableView.estimatedRowHeight = 50
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        if !defaults.bool(forKey: Keys.initialized.rawValue){
-            data.setupDefaultData()
-        }
         
     }
 
