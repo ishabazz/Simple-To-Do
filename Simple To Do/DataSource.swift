@@ -14,7 +14,11 @@ class DataSource:NSObject{
     
     
     ///   An array of tasks
-    var tasks:[Task] = []
+    var tasks:[Task] = [] {
+        didSet{
+            save()
+        }
+    }
     
     /// User defaults
     let defaults = UserDefaults.standard
@@ -27,8 +31,6 @@ class DataSource:NSObject{
         
         let aTask = Task(name: task, completed: false)
         tasks.append(aTask)
-        
-        save()
         
     }
     
@@ -52,7 +54,6 @@ class DataSource:NSObject{
         let task = tasks[index.row]
         task.completed = !task.completed
         tasks[index.row] = task
-        save()
     }
     
     
@@ -70,7 +71,6 @@ class DataSource:NSObject{
     func delete(index:IndexPath){
         
         tasks.remove(at:index.row)
-        
     }
     
     
