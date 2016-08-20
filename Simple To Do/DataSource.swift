@@ -31,7 +31,7 @@ class DataSource:NSObject{
         
         let aTask = Task(name: task, completed: false)
         tasks.append(aTask)
-        
+        save()
     }
     
     
@@ -54,6 +54,8 @@ class DataSource:NSObject{
         let task = tasks[index.row]
         task.completed = !task.completed
         tasks[index.row] = task
+        
+        save()
     }
     
     
@@ -71,6 +73,7 @@ class DataSource:NSObject{
     func delete(index:IndexPath){
         
         tasks.remove(at:index.row)
+        save()
     }
     
     
