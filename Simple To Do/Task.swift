@@ -36,6 +36,5 @@ extension Task:NSCoding{
     func encode(with aCoder: NSCoder) {
         aCoder.encode(self.name, forKey: Keys.name.rawValue)
         aCoder.encode(self.completed as NSNumber, forKey:Keys.completed.rawValue)
-        
     }
 }
