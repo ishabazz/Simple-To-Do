@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11129.15" systemVersion="16A239j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cva-PD-kfg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cva-PD-kfg">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,7 +25,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" id="4LH-uf-TJk" customClass="TaskCell" customModule="Simple_To_Do" customModuleProvider="target">
-                                        <frame key="frameInset" minY="92" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4LH-uf-TJk" id="iFS-P7-BcR">
                                             <frame key="frameInset" width="375" height="43"/>
@@ -48,6 +48,7 @@
                                                 <constraint firstItem="Jmh-bv-aG7" firstAttribute="top" secondItem="iFS-P7-BcR" secondAttribute="topMargin" constant="8" id="IgH-h7-pZv"/>
                                                 <constraint firstItem="M9D-Jy-kw1" firstAttribute="centerY" secondItem="iFS-P7-BcR" secondAttribute="centerY" id="OMk-F1-7jl"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Jmh-bv-aG7" secondAttribute="trailing" constant="16" id="h6f-lw-O6E"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Jmh-bv-aG7" secondAttribute="bottom" constant="-1.5" id="tcC-rv-Up0"/>
                                                 <constraint firstItem="M9D-Jy-kw1" firstAttribute="leading" secondItem="iFS-P7-BcR" secondAttribute="leadingMargin" id="vza-Mj-J2u"/>
                                             </constraints>
                                         </tableViewCellContentView>

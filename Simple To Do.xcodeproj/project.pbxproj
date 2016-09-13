@@ -17,6 +17,8 @@
 		B484DD771D3AA9FA00FE1844 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B484DD761D3AA9FA00FE1844 /* TaskCell.swift */; };
 		B484DD791D3AB40A00FE1844 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B484DD781D3AB40A00FE1844 /* Task.swift */; };
 		B484DD7B1D3AB4F000FE1844 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B484DD7A1D3AB4F000FE1844 /* DataSource.swift */; };
+		B4D690721D884FFE00F08BAD /* CoreDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D690711D884FFE00F08BAD /* CoreDataSource.swift */; };
+		B4D690751D88502400F08BAD /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4D690731D88502400F08BAD /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		B484DD761D3AA9FA00FE1844 /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		B484DD781D3AB40A00FE1844 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		B484DD7A1D3AB4F000FE1844 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		B4D690711D884FFE00F08BAD /* CoreDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataSource.swift; sourceTree = "<group>"; };
+		B4D690741D88502400F08BAD /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				B484DD761D3AA9FA00FE1844 /* TaskCell.swift */,
 				B484DD781D3AB40A00FE1844 /* Task.swift */,
 				B484DD7A1D3AB4F000FE1844 /* DataSource.swift */,
+				B4D690711D884FFE00F08BAD /* CoreDataSource.swift */,
+				B4D690731D88502400F08BAD /* Model.xcdatamodeld */,
 				B484DD4F1D3A9B5100FE1844 /* Assets.xcassets */,
 				B484DD511D3A9B5100FE1844 /* LaunchScreen.storyboard */,
 				B484DD541D3A9B5100FE1844 /* Info.plist */,
@@ -277,8 +283,10 @@
 				B484DD791D3AB40A00FE1844 /* Task.swift in Sources */,
 				B484DD4B1D3A9B5100FE1844 /* ViewController.swift in Sources */,
 				B484DD771D3AA9FA00FE1844 /* TaskCell.swift in Sources */,
+				B4D690751D88502400F08BAD /* Model.xcdatamodeld in Sources */,
 				B484DD7B1D3AB4F000FE1844 /* DataSource.swift in Sources */,
 				B484DD491D3A9B5100FE1844 /* AppDelegate.swift in Sources */,
+				B4D690721D884FFE00F08BAD /* CoreDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +523,7 @@
 				B484DD6F1D3A9B5100FE1844 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B484DD701D3A9B5100FE1844 /* Build configuration list for PBXNativeTarget "Simple To DoTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +532,7 @@
 				B484DD721D3A9B5100FE1844 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B484DD731D3A9B5100FE1844 /* Build configuration list for PBXNativeTarget "Simple To DoUITests" */ = {
 			isa = XCConfigurationList;
@@ -531,8 +541,22 @@
 				B484DD751D3A9B5100FE1844 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B4D690731D88502400F08BAD /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B4D690741D88502400F08BAD /* Model.xcdatamodel */,
+			);
+			currentVersion = B4D690741D88502400F08BAD /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B484DD3D1D3A9B5100FE1844 /* Project object */;
 }

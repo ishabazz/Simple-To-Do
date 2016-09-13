@@ -7,11 +7,11 @@
 //
 
 import UIKit
-
+import CoreData
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    let data = DataSource()
+    let data = CoreDataSource()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,10 +21,8 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.estimatedRowHeight = 50
         tableView.rowHeight = UITableViewAutomaticDimension
-        
-        if data.taskCount() == 0 {
-            data.setupDefaultData()
-        }
+        data.setFRCDelegate(self)
+    
         
     }
 
@@ -70,13 +68,72 @@ extension ViewController:UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         data.toggleCompletion(index: indexPath)
-        self.tableView.reloadData()
         
     }
     
-
- 
-    
-    
 }
+
+
+extension ViewController: NSFetchedResultsControllerDelegate {
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView?.beginUpdates()
+        
+    }
+    
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView?.endUpdates()
+        
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        
+        switch type {
+        case .insert:
+            guard  let indexPath = newIndexPath else {
+                return
+            }
+            
+            self.tableView.insertRows(at: [indexPath], with: .automatic)
+            
+        case .delete:
+            guard  let indexPath = indexPath else {
+                return
+            }
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+        case .move:
+            guard  let fromIndexPath = indexPath, let toIndexPath = newIndexPath else {
+                return
+            }
+            self.tableView.moveRow(at: fromIndexPath, to: toIndexPath)
+            
+        case .update:
+            guard  let indexPath = newIndexPath else {
+                return
+            }
+            self.tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
+        
+    }
+    
+    
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
+        switch type {
+        case .insert:
+            self.tableView.insertSections(IndexSet(integer: sectionIndex), with: .automatic)
+            
+        case .delete:
+            self.tableView.deleteSections(IndexSet(integer: sectionIndex), with: .automatic)
+        default:
+            break
+        }
+        
+    }
+}
+
+
+
 
