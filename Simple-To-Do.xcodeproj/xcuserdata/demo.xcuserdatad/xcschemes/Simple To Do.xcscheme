@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B484DD441D3A9B5100FE1844"
-               BuildableName = "Simple To Do.app"
-               BlueprintName = "Simple To Do"
-               ReferencedContainer = "container:Simple To Do.xcodeproj">
+               BuildableName = "Simple-To-Do.app"
+               BlueprintName = "Simple-To-Do"
+               ReferencedContainer = "container:Simple-To-Do.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B484DD581D3A9B5100FE1844"
-               BuildableName = "Simple To DoTests.xctest"
-               BlueprintName = "Simple To DoTests"
-               ReferencedContainer = "container:Simple To Do.xcodeproj">
+               BuildableName = "Simple-To-DoTests.xctest"
+               BlueprintName = "Simple-To-DoTests"
+               ReferencedContainer = "container:Simple-To-Do.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B484DD631D3A9B5100FE1844"
-               BuildableName = "Simple To DoUITests.xctest"
-               BlueprintName = "Simple To DoUITests"
-               ReferencedContainer = "container:Simple To Do.xcodeproj">
+               BuildableName = "Simple-To-DoUITests.xctest"
+               BlueprintName = "Simple-To-DoUITests"
+               ReferencedContainer = "container:Simple-To-Do.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B484DD441D3A9B5100FE1844"
-            BuildableName = "Simple To Do.app"
-            BlueprintName = "Simple To Do"
-            ReferencedContainer = "container:Simple To Do.xcodeproj">
+            BuildableName = "Simple-To-Do.app"
+            BlueprintName = "Simple-To-Do"
+            ReferencedContainer = "container:Simple-To-Do.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B484DD441D3A9B5100FE1844"
-            BuildableName = "Simple To Do.app"
-            BlueprintName = "Simple To Do"
-            ReferencedContainer = "container:Simple To Do.xcodeproj">
+            BuildableName = "Simple-To-Do.app"
+            BlueprintName = "Simple-To-Do"
+            ReferencedContainer = "container:Simple-To-Do.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B484DD441D3A9B5100FE1844"
-            BuildableName = "Simple To Do.app"
-            BlueprintName = "Simple To Do"
-            ReferencedContainer = "container:Simple To Do.xcodeproj">
+            BuildableName = "Simple-To-Do.app"
+            BlueprintName = "Simple-To-Do"
+            ReferencedContainer = "container:Simple-To-Do.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
