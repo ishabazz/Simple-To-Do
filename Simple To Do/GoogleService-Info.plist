@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>975154451521-f7n06330121e9hf447rkpcf3eqhl3fk0.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.975154451521-f7n06330121e9hf447rkpcf3eqhl3fk0</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA24rZhl3_QtuOXUShm0OKBau4_j67MVt8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>975154451521</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.illuminatedbits.Simple-To-Do</string>
+	<key>PROJECT_ID</key>
+	<string>simple-to-do-ede77</string>
+	<key>STORAGE_BUCKET</key>
+	<string>simple-to-do-ede77.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:975154451521:ios:a56d4f01b90865cd</string>
+	<key>DATABASE_URL</key>
+	<string>https://simple-to-do-ede77.firebaseio.com</string>
+</dict>
+</plist>
