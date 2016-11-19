@@ -113,13 +113,13 @@ extension DataSource:UITableViewDataSource{
         
     }
     
-    func format(text:String, strike:Bool) -> AttributedString{
+    func format(text:String, strike:Bool) -> NSAttributedString{
         
         
         if strike {
-            return AttributedString(string: text, attributes: [NSStrikethroughStyleAttributeName:NSNumber(value:NSUnderlineStyle.styleSingle.rawValue)])
+            return NSAttributedString(string: text, attributes: [NSStrikethroughStyleAttributeName:NSNumber(value:NSUnderlineStyle.styleSingle.rawValue)])
         }
-        return  AttributedString(string: text, attributes: [NSStrikethroughStyleAttributeName:NSNumber(value:NSUnderlineStyle.styleNone.rawValue)])
+        return NSAttributedString(string: text, attributes: [NSStrikethroughStyleAttributeName:NSNumber(value:NSUnderlineStyle.styleNone.rawValue)])
     }
     
     
